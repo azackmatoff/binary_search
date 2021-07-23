@@ -8,6 +8,7 @@ void main(List<String> arguments) {
 
     while (_first <= _last) {
       final _mid = (_first + _last) ~/ 2;
+      // (_first + _last) ~/ 2 is equal to ((_first + _last) / 2).toInt()
       if (list[_mid] == target) {
         return _mid;
       } else if (list[_mid] > target) {
@@ -25,8 +26,8 @@ void main(List<String> arguments) {
   int linearSearch(List<int> list, int target) {
     // returns rarget's index in list if found, else returns -1
     for (var i in list) {
+      //if (i != list.length), to fix error: dart Invalid value: Not in inclusive range...
       if (i != list.length) {
-        //to fix error: dart Invalid value: Not in inclusive range...
         if (list[i] == target) {
           return i;
         }
