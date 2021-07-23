@@ -2,6 +2,7 @@ void main(List<String> arguments) {
   List<int> myList = [1, 2, 3, 4, 5];
 
   int binarySearch(List<int> list, int target) {
+    // returns rarget's index in list if found, else returns -1
     var _first = 0;
     var _last = list.length - 1;
 
@@ -22,8 +23,10 @@ void main(List<String> arguments) {
   // print(binarySearch(myList, 6));
 
   int linearSearch(List<int> list, int target) {
+    // returns rarget's index in list if found, else returns -1
     for (var i in list) {
       if (i != list.length) {
+        //to fix error: dart Invalid value: Not in inclusive range...
         if (list[i] == target) {
           return i;
         }
