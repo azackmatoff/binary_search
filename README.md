@@ -1,1 +1,3 @@
-A simple command-line application.
+Algorithms in Dart.
+
+Basic binary search implemented in dart
